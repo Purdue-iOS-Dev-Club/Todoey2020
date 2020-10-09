@@ -37,4 +37,15 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            todoList.remove(at: indexPath.row)
+            todoTableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+        
+    }
 }

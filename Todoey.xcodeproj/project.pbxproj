@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7132A5912530EE9700155B9C /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132A5902530EE9700155B9C /* AddToDoViewController.swift */; };
 		E3D999B42527B8DC0052216A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D999B32527B8DC0052216A /* AppDelegate.swift */; };
 		E3D999B62527B8DC0052216A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D999B52527B8DC0052216A /* SceneDelegate.swift */; };
 		E3D999B82527B8DC0052216A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D999B72527B8DC0052216A /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7132A5902530EE9700155B9C /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
 		E3D999B02527B8DC0052216A /* Todoey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D999B32527B8DC0052216A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D999B52527B8DC0052216A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				E3D999C12527B8E30052216A /* Info.plist */,
 				E3D999C82527BB2F0052216A /* Todo.swift */,
 				E3D999CB2527BE090052216A /* TodoTableViewCell.swift */,
+				7132A5902530EE9700155B9C /* AddToDoViewController.swift */,
 			);
 			path = Todoey;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				E3D999B42527B8DC0052216A /* AppDelegate.swift in Sources */,
 				E3D999B62527B8DC0052216A /* SceneDelegate.swift in Sources */,
 				E3D999CC2527BE090052216A /* TodoTableViewCell.swift in Sources */,
+				7132A5912530EE9700155B9C /* AddToDoViewController.swift in Sources */,
 				E3D999C92527BB2F0052216A /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

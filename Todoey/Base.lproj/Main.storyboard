@@ -67,7 +67,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="agB-xp-4KF" secondAttribute="bottom" id="z2k-5P-rO7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Todoey" id="fKy-YY-my2"/>
+                    <navigationItem key="navigationItem" title="Todoey" id="fKy-YY-my2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ytm-QD-zx6">
+                            <connections>
+                                <segue destination="HKS-kf-GKN" kind="showDetail" id="XWY-Yp-RHS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="todoTableView" destination="agB-xp-4KF" id="WaE-gL-WlN"/>
                     </connections>
@@ -75,6 +81,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="821.73913043478262" y="89.732142857142847"/>
+        </scene>
+        <!--Add To Do View Controller-->
+        <scene sceneID="sI9-K2-9ed">
+            <objects>
+                <viewController id="HKS-kf-GKN" customClass="AddToDoViewController" customModule="Todoey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pxd-XU-EOW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dj-IZ-fxd">
+                                <rect key="frame" x="20" y="50" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TaV-aa-2c2">
+                                <rect key="frame" x="20" y="76" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gr7-sE-h93">
+                                <rect key="frame" x="20" y="156" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="D8S-zx-dBI">
+                                <rect key="frame" x="0.0" y="220" width="414" height="216"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ru-1e-5gH">
+                                <rect key="frame" x="190" y="456" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="JAG-yF-cbR" kind="unwind" identifier="saveToDo" unwindAction="unwindFor:" id="LjX-NF-bLd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTj-FJ-dmG">
+                                <rect key="frame" x="20" y="130" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jST-wU-xfU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="CTj-FJ-dmG" firstAttribute="top" secondItem="TaV-aa-2c2" secondAttribute="bottom" constant="20" id="2xU-zs-iPd"/>
+                            <constraint firstItem="7ru-1e-5gH" firstAttribute="top" secondItem="D8S-zx-dBI" secondAttribute="bottom" constant="20" id="9n8-JC-qnG"/>
+                            <constraint firstItem="CTj-FJ-dmG" firstAttribute="leading" secondItem="jST-wU-xfU" secondAttribute="leading" constant="20" id="Hsa-KP-CZQ"/>
+                            <constraint firstItem="8dj-IZ-fxd" firstAttribute="top" secondItem="jST-wU-xfU" secondAttribute="top" constant="50" id="JB4-sK-8iP"/>
+                            <constraint firstItem="D8S-zx-dBI" firstAttribute="top" secondItem="gr7-sE-h93" secondAttribute="bottom" constant="30" id="NxB-ZR-9VX"/>
+                            <constraint firstItem="jST-wU-xfU" firstAttribute="trailing" secondItem="CTj-FJ-dmG" secondAttribute="trailing" constant="20" id="PMW-XM-Xlg"/>
+                            <constraint firstItem="TaV-aa-2c2" firstAttribute="leading" secondItem="jST-wU-xfU" secondAttribute="leading" constant="20" id="Q1A-c9-Eov"/>
+                            <constraint firstItem="7ru-1e-5gH" firstAttribute="centerX" secondItem="Pxd-XU-EOW" secondAttribute="centerX" id="Q29-ri-TyD"/>
+                            <constraint firstItem="D8S-zx-dBI" firstAttribute="trailing" secondItem="jST-wU-xfU" secondAttribute="trailing" id="TQv-px-JgV"/>
+                            <constraint firstItem="jST-wU-xfU" firstAttribute="trailing" secondItem="gr7-sE-h93" secondAttribute="trailing" constant="20" id="fP9-p4-9rj"/>
+                            <constraint firstItem="TaV-aa-2c2" firstAttribute="top" secondItem="8dj-IZ-fxd" secondAttribute="bottom" constant="5" id="grd-Xz-vbY"/>
+                            <constraint firstItem="D8S-zx-dBI" firstAttribute="leading" secondItem="jST-wU-xfU" secondAttribute="leading" id="jTg-B2-Z7J"/>
+                            <constraint firstItem="8dj-IZ-fxd" firstAttribute="leading" secondItem="jST-wU-xfU" secondAttribute="leading" constant="20" id="jTz-RQ-4e6"/>
+                            <constraint firstItem="jST-wU-xfU" firstAttribute="trailing" secondItem="TaV-aa-2c2" secondAttribute="trailing" constant="20" id="rR5-jJ-lbU"/>
+                            <constraint firstItem="gr7-sE-h93" firstAttribute="top" secondItem="CTj-FJ-dmG" secondAttribute="bottom" constant="5" id="t6H-wm-Vtd"/>
+                            <constraint firstItem="gr7-sE-h93" firstAttribute="leading" secondItem="jST-wU-xfU" secondAttribute="leading" constant="20" id="x7t-jQ-4rX"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hHd-ZP-6Wm" appends="YES" id="4LB-mO-e0z"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="dateField" destination="D8S-zx-dBI" id="ezE-DK-zYE"/>
+                        <outlet property="descField" destination="gr7-sE-h93" id="sun-yI-njA"/>
+                        <outlet property="titleField" destination="TaV-aa-2c2" id="DVm-AE-F54"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Pw-Ac-9TE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="JAG-yF-cbR" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="hHd-ZP-6Wm">
+                    <connections>
+                        <action selector="exitKeyboard:" destination="HKS-kf-GKN" id="Ubd-eS-IJc"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1760.8695652173915" y="89.732142857142847"/>
         </scene>
         <!--Todoey-->
         <scene sceneID="gLX-HY-wjX">
